@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung - ShiftCheck</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --page-bg: #f5f5f7;
+            --text: #1d1d1f;
+            --text-secondary: #424245;
+            --header-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --section-bg: #ffffff;
+            --section-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --accent: #667eea;
+            --border: #e5e5e7;
+            --link-bg: #667eea;
+            --link-bg-hover: #5a6fd6;
+            --link-text: #ffffff;
+            --footer: #86868b;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --page-bg: #000000;
+                --text: #f5f5f7;
+                --text-secondary: #a1a1a6;
+                --section-bg: #1c1c1e;
+                --section-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+                --border: #38383a;
+                --link-bg: #5a6fd6;
+                --link-bg-hover: #667eea;
+                --footer: #86868b;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--page-bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .header p {
+            opacity: 0.85;
+            font-size: 15px;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        .section {
+            background: var(--section-bg);
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: var(--section-shadow);
+        }
+        h2 {
+            color: var(--text);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        p {
+            margin-bottom: 14px;
+            color: var(--text-secondary);
+        }
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+        strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        a {
+            color: var(--accent);
+        }
+        @media (prefers-color-scheme: dark) {
+            a {
+                color: #a78bfa;
+            }
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 14px 28px;
+            background: var(--link-bg);
+            color: var(--link-text);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: background 0.2s ease;
+        }
+        .back-link:hover {
+            background: var(--link-bg-hover);
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--footer);
+            font-size: 14px;
+        }
+        .footer a {
+            color: var(--footer);
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .highlight-box {
+            background: rgba(102, 126, 234, 0.08);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+        @media (prefers-color-scheme: dark) {
+            .highlight-box {
+                background: rgba(102, 126, 234, 0.15);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Datenschutzerklärung</h1>
+        <p>ShiftCheck · Stand: Januar 2025</p>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>1. Verantwortlicher</h2>
+            <p>Verantwortlich für die Datenverarbeitung in dieser App ist:</p>
+            <div class="highlight-box">
+                <strong>CodeCraft</strong><br>
+                Matthias Steins<br>
+                Stationsweg 69<br>
+                41068 Mönchengladbach<br>
+                E-Mail: <a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>2. Welche Daten werden erfasst?</h2>
+            <p>ShiftCheck speichert alle deine Daten <strong>lokal auf deinem Gerät</strong>. Wir haben keinen Zugriff auf:</p>
+            <ul>
+                <li>Deine eingetragenen Schichten</li>
+                <li>Deine Arbeitszeiten</li>
+                <li>Deine Gehaltsabrechnungen</li>
+                <li>Deine persönlichen Notizen</li>
+            </ul>
+            <p><strong>Keine Cloud-Synchronisation:</strong> Deine Daten werden nicht auf externe Server übertragen.</p>
+        </div>
+
+        <div class="section">
+            <h2>3. Nutzungsanalyse (optional)</h2>
+            <p>Wenn du zustimmst, erfassen wir anonymisierte Nutzungsdaten, um die App zu verbessern:</p>
+            <ul>
+                <li>Welche Funktionen genutzt werden</li>
+                <li>App-Abstürze und Fehler</li>
+                <li>Geräteinformationen (iOS-Version, Gerätetyp)</li>
+            </ul>
+            <p>Du kannst dies jederzeit in den Einstellungen deaktivieren.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. In-App-Käufe</h2>
+            <p>Käufe werden über Apple abgewickelt. Wir erhalten:</p>
+            <ul>
+                <li>Keine Zahlungsinformationen</li>
+                <li>Keine Kreditkartendaten</li>
+                <li>Nur die Information, ob ein Kauf erfolgreich war</li>
+            </ul>
+            <p>Alle Zahlungsdaten werden ausschließlich von Apple verarbeitet.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Deine Rechte</h2>
+            <p>Du hast folgende Rechte bezüglich deiner Daten:</p>
+            <ul>
+                <li><strong>Auskunft:</strong> Du kannst jederzeit erfahren, welche Daten wir haben</li>
+                <li><strong>Löschung:</strong> Lösche die App und alle Daten sind weg</li>
+                <li><strong>Datenexport:</strong> Exportiere deine Schichten als CSV</li>
+                <li><strong>Widerspruch:</strong> Deaktiviere Analyse in den Einstellungen</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Datensicherheit</h2>
+            <p>Deine Daten sind durch iOS-Sicherheitsmechanismen geschützt:</p>
+            <ul>
+                <li>Verschlüsselung auf dem Gerät</li>
+                <li>Keine Übertragung an Dritte</li>
+                <li>Kein Zugriff ohne Entsperrung des Geräts</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Kontakt</h2>
+            <p>Bei Fragen zum Datenschutz erreichst du uns unter:</p>
+            <p><a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a></p>
+        </div>
+
+        <a href="index.html" class="back-link">← Zurück zur Übersicht</a>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 CodeCraft · <a href="impressum.html">Impressum</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a></p>
+    </div>
+</body>
+</html>

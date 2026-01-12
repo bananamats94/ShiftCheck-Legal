@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutzungsbedingungen - ShiftCheck</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --page-bg: #f5f5f7;
+            --text: #1d1d1f;
+            --text-secondary: #424245;
+            --header-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --section-bg: #ffffff;
+            --section-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --accent: #667eea;
+            --border: #e5e5e7;
+            --link-bg: #667eea;
+            --link-bg-hover: #5a6fd6;
+            --link-text: #ffffff;
+            --footer: #86868b;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --page-bg: #000000;
+                --text: #f5f5f7;
+                --text-secondary: #a1a1a6;
+                --section-bg: #1c1c1e;
+                --section-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+                --border: #38383a;
+                --link-bg: #5a6fd6;
+                --link-bg-hover: #667eea;
+                --footer: #86868b;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--page-bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .header p {
+            opacity: 0.85;
+            font-size: 15px;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        .section {
+            background: var(--section-bg);
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: var(--section-shadow);
+        }
+        h2 {
+            color: var(--text);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        p {
+            margin-bottom: 14px;
+            color: var(--text-secondary);
+        }
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+        strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        a {
+            color: var(--accent);
+        }
+        @media (prefers-color-scheme: dark) {
+            a {
+                color: #a78bfa;
+            }
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 14px 28px;
+            background: var(--link-bg);
+            color: var(--link-text);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: background 0.2s ease;
+        }
+        .back-link:hover {
+            background: var(--link-bg-hover);
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            color: var(--footer);
+            font-size: 14px;
+        }
+        .footer a {
+            color: var(--footer);
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .warning-box {
+            background: rgba(255, 149, 0, 0.1);
+            border-left: 4px solid #ff9500;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+        @media (prefers-color-scheme: dark) {
+            .warning-box {
+                background: rgba(255, 149, 0, 0.15);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Nutzungsbedingungen</h1>
+        <p>ShiftCheck · Stand: Januar 2025</p>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>1. Geltungsbereich</h2>
+            <p>Diese Nutzungsbedingungen gelten für die Verwendung der ShiftCheck App ("App"). Mit der Nutzung der App akzeptierst du diese Bedingungen.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. Leistungsbeschreibung</h2>
+            <p>ShiftCheck ist eine Schichtplanungs-App mit folgenden Funktionen:</p>
+            <ul>
+                <li>Erfassung und Verwaltung von Arbeitsschichten</li>
+                <li>Automatische Berechnung von Arbeitszeiten</li>
+                <li>Gehaltsrechner mit Zuschlägen</li>
+                <li>Urlaubsverwaltung</li>
+                <li>Export von Schichtdaten</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Wichtiger Hinweis</h2>
+            <div class="warning-box">
+                <strong>Achtung:</strong> Die Berechnungen in ShiftCheck dienen nur zur Orientierung und ersetzen keine offizielle Gehaltsabrechnung. Für verbindliche Abrechnungen wende dich an deinen Arbeitgeber.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>4. Premium-Funktionen</h2>
+            <p>ShiftCheck Pro bietet erweiterte Funktionen als:</p>
+            <ul>
+                <li><strong>Monatsabonnement:</strong> Automatische Verlängerung, jederzeit kündbar</li>
+                <li><strong>Jahresabonnement:</strong> Automatische Verlängerung, jederzeit kündbar</li>
+                <li><strong>Lifetime:</strong> Einmalzahlung, unbegrenzter Zugang</li>
+            </ul>
+            <p>Abonnements werden über dein Apple-ID-Konto abgerechnet.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Haftungsausschluss</h2>
+            <p>Die App wird "wie gesehen" bereitgestellt. Wir übernehmen keine Haftung für:</p>
+            <ul>
+                <li>Fehlerhafte Berechnungen</li>
+                <li>Datenverlust durch Geräteprobleme</li>
+                <li>Entscheidungen basierend auf App-Daten</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Geistiges Eigentum</h2>
+            <p>Alle Rechte an der App, einschließlich Design, Code und Markenzeichen, verbleiben bei CodeCraft.</p>
+        </div>
+
+        <div class="section">
+            <h2>7. Änderungen</h2>
+            <p>Wir behalten uns vor, diese Bedingungen zu aktualisieren. Wesentliche Änderungen werden in der App kommuniziert.</p>
+        </div>
+
+        <div class="section">
+            <h2>8. Anwendbares Recht</h2>
+            <p>Es gilt deutsches Recht. Gerichtsstand ist, soweit gesetzlich zulässig, Mönchengladbach.</p>
+        </div>
+
+        <div class="section">
+            <h2>9. Kontakt</h2>
+            <p>Bei Fragen erreichst du uns unter:</p>
+            <p><a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a></p>
+        </div>
+
+        <a href="index.html" class="back-link">← Zurück zur Übersicht</a>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 CodeCraft · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    </div>
+</body>
+</html>

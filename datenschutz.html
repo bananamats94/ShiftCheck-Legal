@@ -154,22 +154,37 @@
         </section>
 
         <section>
-            <h2>5. Externe Dienste</h2>
+            <h2>5. Dienstplan-Scanner (Privacy-First)</h2>
+            <p>ShiftCheck bietet einen Dienstplan-Scanner, der Schichtpläne per Kamera erfasst und automatisch Schichten einträgt. Der Schutz Ihrer Kolleg:innen-Daten hat dabei höchste Priorität:</p>
+            <ul>
+                <li><strong>Vollständiges Bild bleibt auf dem Gerät:</strong> Das Foto des gesamten Dienstplans verlässt zu keinem Zeitpunkt Ihr Gerät. Alle Namen und Daten Ihrer Kolleg:innen werden ausschließlich lokal verarbeitet und sofort verworfen.</li>
+                <li><strong>Lokale Zeilenerkennung:</strong> Die Erkennung der Tabellenzeilen erfolgt vollständig auf dem Gerät mittels Apple Vision (on-device OCR). Kein Netzwerk-Call ist hierfür erforderlich.</li>
+                <li><strong>Privacy-Crop:</strong> Vor jeglicher Netzwerk-Kommunikation wird ein Bildausschnitt erstellt, der ausschließlich die Kopfzeile (Wochentage/Daten) und Ihre eigene Zeile enthält. Nur dieser minimale Ausschnitt wird an den Server gesendet.</li>
+                <li><strong>KI-Analyse des Ausschnitts:</strong> Der Privacy-Crop (2 Zeilen) wird an Google Gemini Vision über Firebase Cloud Functions gesendet, um die Schicht-Codes zu erkennen. Dies verbraucht einen Credit.</li>
+                <li><strong>Layout-Lernen:</strong> Bei hoher Erkennungsqualität wird das Tabellen-Layout lokal gespeichert. Folge-Scans desselben Dienstplan-Formats benötigen keine erneute KI-Analyse und sind kostenlos.</li>
+            </ul>
+            <p><strong>Garantie:</strong> Zu keinem Zeitpunkt werden personenbezogene Daten Dritter (Kolleg:innen-Namen, deren Schichten) an einen Server übermittelt. Die Verarbeitung dieser Daten findet ausschließlich lokal statt.</p>
+            <p><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) – Der Scan wird nur durch aktive Nutzeraktion ausgelöst und verbraucht einen Credit.</p>
+        </section>
+
+        <section>
+            <h2>6. Externe Dienste</h2>
             <ul>
                 <li><strong>Firebase (Google):</strong> Anonyme Authentifizierung, Cloud Functions, Firestore (Crowd-Daten), Push-Benachrichtigungen, App Check</li>
-                <li><strong>Google Gemini:</strong> KI-Analyse von Gehaltsabrechnungswerten und optionale bildbasierte Erkennung (nur bei aktiver Nutzung, Credit-basiert)</li>
+                <li><strong>Google Gemini:</strong> KI-Analyse von Gehaltsabrechnungswerten, bildbasierte Erkennung und Dienstplan-Ausschnitt-Analyse (nur bei aktiver Nutzung, Credit-basiert)</li>
+                <li><strong>Apple Vision (on-device):</strong> Lokale Texterkennung für Dienstplan-Zeilen und Gehaltsabrechnungen – keine Netzwerk-Kommunikation</li>
                 <li><strong>Apple StoreKit:</strong> In-App-Käufe (Abwicklung durch Apple)</li>
             </ul>
             <p>Alle Firebase-Dienste laufen auf Servern in der EU. Es erfolgt keine Weitergabe an Werbetreibende oder sonstige Dritte.</p>
         </section>
 
         <section>
-            <h2>6. Nutzungszweck</h2>
+            <h2>7. Nutzungszweck</h2>
             <p>Die Daten werden ausschließlich zur Diagnose, Stabilisierung der App, Verbesserung der Tarifgenauigkeit und zur Bereitstellung der KI-Funktionen genutzt. Eine Weitergabe an Werbetreibende oder Dritte erfolgt nicht.</p>
         </section>
 
         <section>
-            <h2>7. Ihre Rechte</h2>
+            <h2>8. Ihre Rechte</h2>
             <ul>
                 <li>Auskunft über gespeicherte Daten (Art. 15 DSGVO)</li>
                 <li>Löschung durch Deinstallation oder Kontaktaufnahme (Art. 17 DSGVO)</li>
@@ -180,7 +195,7 @@
         </section>
 
         <section>
-            <h2>8. Impressum</h2>
+            <h2>9. Impressum</h2>
             <p><a href="impressum.html" class="impressum-link">Impressum &raquo;</a> · <a href="privacy.html" class="impressum-link">English Privacy</a></p>
         </section>
 

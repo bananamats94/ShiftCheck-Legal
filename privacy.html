@@ -104,22 +104,37 @@
         </section>
 
         <section>
-            <h2>5. External Services</h2>
+            <h2>5. Schedule Scanner (Privacy-First)</h2>
+            <p>ShiftCheck offers a schedule scanner that captures work rosters via camera and automatically creates shift entries. Protecting your colleagues' data is the highest priority:</p>
+            <ul>
+                <li><strong>Full image stays on your device:</strong> The photo of the complete work schedule never leaves your device at any point. All names and data of your colleagues are processed exclusively on-device and immediately discarded.</li>
+                <li><strong>On-device row detection:</strong> Table row recognition is performed entirely on your device using Apple Vision (on-device OCR). No network call is required for this step.</li>
+                <li><strong>Privacy Crop:</strong> Before any network communication, a crop is created containing only the header row (weekdays/dates) and your own row. Only this minimal crop is sent to the server.</li>
+                <li><strong>AI analysis of the crop:</strong> The privacy crop (2 rows) is sent to Google Gemini Vision via Firebase Cloud Functions to recognize shift codes. This consumes one credit.</li>
+                <li><strong>Layout learning:</strong> When recognition quality is high, the table layout is stored locally. Follow-up scans of the same schedule format require no further AI analysis and are free of charge.</li>
+            </ul>
+            <p><strong>Guarantee:</strong> At no point is any personal data of third parties (colleagues' names, their shifts) transmitted to any server. Processing of this data occurs exclusively on-device.</p>
+            <p><strong>Legal basis:</strong> Consent (Art. 6(1)(a) GDPR) – scanning is only triggered by active user action and consumes a credit.</p>
+        </section>
+
+        <section>
+            <h2>6. External Services</h2>
             <ul>
                 <li><strong>Firebase (Google):</strong> Anonymous authentication, Cloud Functions, Firestore (crowd data), push notifications, App Check</li>
-                <li><strong>Google Gemini:</strong> AI analysis of payslip values and optional image-based recognition (only when actively used, credit-based)</li>
+                <li><strong>Google Gemini:</strong> AI analysis of payslip values, image-based recognition, and schedule crop analysis (only when actively used, credit-based)</li>
+                <li><strong>Apple Vision (on-device):</strong> Local text recognition for schedule rows and payslips – no network communication</li>
                 <li><strong>Apple StoreKit:</strong> In-app purchases (processed by Apple)</li>
             </ul>
             <p>All Firebase services run on EU-based servers. No data is shared with advertisers or other third parties.</p>
         </section>
 
         <section>
-            <h2>6. Purpose</h2>
+            <h2>7. Purpose</h2>
             <p>Data is used solely for bug fixing, stability improvements, improving salary accuracy, and providing AI features. There is no sharing with advertisers or third parties.</p>
         </section>
 
         <section>
-            <h2>7. Your Rights</h2>
+            <h2>8. Your Rights</h2>
             <ul>
                 <li>Request an overview of stored data (Art. 15 GDPR)</li>
                 <li>Delete data via app removal or request (Art. 17 GDPR)</li>
@@ -130,7 +145,7 @@
         </section>
 
         <section>
-            <h2>8. Imprint</h2>
+            <h2>9. Imprint</h2>
             <p><a href="impressum.html" class="impressum-link">Imprint &raquo;</a> · <a href="datenschutz.html" class="impressum-link">Deutsch</a></p>
         </section>
 

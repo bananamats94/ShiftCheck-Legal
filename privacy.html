@@ -93,15 +93,21 @@
 
         <section>
             <h2>4. AI Analysis (Payslips)</h2>
-            <p>When using AI analysis, recognized values from your payslip (gross salary, bonuses, hours) are sent to Google Gemini via Firebase Cloud Functions. Processing occurs on EU servers (europe-west1). No image data or original documents are transmitted – only OCR-extracted numerical values.</p>
-            <p><strong>Legal basis:</strong> Consent (Art. 6(1)(a) GDPR) – analysis is only triggered by active user action.</p>
+            <p>ShiftCheck offers two levels of AI analysis:</p>
+            <ul>
+                <li><strong>Standard Analysis:</strong> OCR-extracted numerical values (gross salary, bonuses, hours) are sent to Google Gemini via Firebase Cloud Functions.</li>
+                <li><strong>Enhanced AI Recognition (Gemini Vision):</strong> When local text recognition produces insufficient results, a compressed image of your payslip may be sent to Google Gemini Vision. This only occurs when local OCR quality is inadequate and consumes one AI credit. The image is used solely for numerical value extraction and is not stored.</li>
+            </ul>
+            <p>All processing occurs on EU servers (europe-west1). Transmitted images are immediately deleted after processing and are not used for model training.</p>
+            <p><strong>Hallucination Protection:</strong> Extracted values are automatically validated against anonymized community benchmarks to detect and discard erroneous AI results.</p>
+            <p><strong>Legal basis:</strong> Consent (Art. 6(1)(a) GDPR) – analysis is only triggered by active user action and consumes a credit.</p>
         </section>
 
         <section>
             <h2>5. External Services</h2>
             <ul>
                 <li><strong>Firebase (Google):</strong> Anonymous authentication, Cloud Functions, Firestore (crowd data), push notifications, App Check</li>
-                <li><strong>Google Gemini:</strong> AI analysis of payslip values (only when actively used)</li>
+                <li><strong>Google Gemini:</strong> AI analysis of payslip values and optional image-based recognition (only when actively used, credit-based)</li>
                 <li><strong>Apple StoreKit:</strong> In-app purchases (processed by Apple)</li>
             </ul>
             <p>All Firebase services run on EU-based servers. No data is shared with advertisers or other third parties.</p>

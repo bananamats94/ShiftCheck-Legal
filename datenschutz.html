@@ -143,15 +143,21 @@
 
         <section>
             <h2>4. KI-Analyse (Gehaltsabrechnungen)</h2>
-            <p>Bei Nutzung der KI-Analyse werden erkannte Werte Ihrer Gehaltsabrechnung (Bruttolohn, Zuschläge, Stunden) an Google Gemini über Firebase Cloud Functions gesendet. Die Verarbeitung erfolgt auf Servern in der EU (europe-west1). Es werden keine Bilddaten oder das originale Dokument übermittelt – nur die per OCR extrahierten Zahlenwerte.</p>
-            <p><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) – Die Analyse wird nur durch aktive Nutzeraktion ausgelöst.</p>
+            <p>ShiftCheck bietet zwei Stufen der KI-Analyse:</p>
+            <ul>
+                <li><strong>Standard-Analyse:</strong> Die per lokaler OCR extrahierten Zahlenwerte (Bruttolohn, Zuschläge, Stunden) werden an Google Gemini über Firebase Cloud Functions gesendet.</li>
+                <li><strong>Erweiterte KI-Erkennung (Gemini Vision):</strong> Wenn die lokale Texterkennung keine ausreichenden Ergebnisse liefert, kann das Bild Ihrer Gehaltsabrechnung komprimiert an Google Gemini Vision gesendet werden. Dies geschieht nur bei unzureichender lokaler Erkennung und verbraucht einen KI-Credit. Das Bild wird ausschließlich zur Extraktion von Zahlenwerten verwendet und nicht gespeichert.</li>
+            </ul>
+            <p>Die Verarbeitung erfolgt auf Servern in der EU (europe-west1). Übermittelte Bilder werden nach der Verarbeitung sofort gelöscht und nicht für Training verwendet.</p>
+            <p><strong>Halluzinationsschutz:</strong> Extrahierte Werte werden automatisch gegen anonymisierte Community-Richtwerte validiert, um fehlerhafte KI-Ergebnisse zu erkennen und zu verwerfen.</p>
+            <p><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) – Die Analyse wird nur durch aktive Nutzeraktion ausgelöst und verbraucht einen Credit.</p>
         </section>
 
         <section>
             <h2>5. Externe Dienste</h2>
             <ul>
                 <li><strong>Firebase (Google):</strong> Anonyme Authentifizierung, Cloud Functions, Firestore (Crowd-Daten), Push-Benachrichtigungen, App Check</li>
-                <li><strong>Google Gemini:</strong> KI-Analyse von Gehaltsabrechnungswerten (nur bei aktiver Nutzung)</li>
+                <li><strong>Google Gemini:</strong> KI-Analyse von Gehaltsabrechnungswerten und optionale bildbasierte Erkennung (nur bei aktiver Nutzung, Credit-basiert)</li>
                 <li><strong>Apple StoreKit:</strong> In-App-Käufe (Abwicklung durch Apple)</li>
             </ul>
             <p>Alle Firebase-Dienste laufen auf Servern in der EU. Es erfolgt keine Weitergabe an Werbetreibende oder sonstige Dritte.</p>
